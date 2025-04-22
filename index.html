@@ -2,48 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Zine</title>
+  <title>View My Zine</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body, html {
-      margin: 0;
+    html, body {
       height: 100%;
-      font-family: sans-serif;
-      background: #f4f4f4;
+      margin: 0;
+      background: #fdfdfd;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      font-family: sans-serif;
     }
-
-    iframe {
-      width: 100%;
-      height: 100vh;
-      border: none;
-    }
-
-    .fallback {
+    .message {
       text-align: center;
-      padding: 2rem;
     }
-
-    .fallback a {
+    .message a {
       display: inline-block;
       margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      background: #333;
-      color: white;
+      padding: 0.75rem 1.5rem;
+      background-color: #000;
+      color: #fff;
       text-decoration: none;
-      border-radius: 4px;
+      border-radius: 5px;
     }
   </style>
 </head>
 <body>
-  <iframe src="Minimalist Aesthetic Inspirational Quote Photo Collage Instagram Post.pdf" type="application/pdf">
-    <!-- Fallback content if iframe fails -->
-    <div class="fallback">
-      <p>Your browser doesn't support embedded PDFs. No worries!</p>
-      <a href="Minimalist Aesthetic Inspirational Quote Photo Collage Instagram Post.pdf" target="_blank">Download the zine</a>
-    </div>
-  </iframe>
+  <div class="message">
+    <h1>Opening Zine...</h1>
+    <p>If it doesn't open automatically, <a id="pdfLink" href="Minimalist Aesthetic Inspirational Quote Photo Collage Instagram Post.pdf" target="_blank">click here to view it</a>.</p>
+  </div>
+
+  <script>
+    // Automatically open the PDF in a new tab
+    window.onload = function() {
+      window.location.href = "Minimalist Aesthetic Inspirational Quote Photo Collage Instagram Post.pdf";
+    };
+  </script>
 </body>
 </html>
